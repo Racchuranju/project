@@ -1,16 +1,10 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from './components/Home';
-import StudentEnrollment from './components/StudentEnrollment';
+import { Routes, Route } from 'react-router-dom'; // Import Routes instead of Switch
 
 function App() {
-    return (
-        <Router>
-            <Switch>
-                <Route exact path="/" component={Home} />
-                <Route path="/students" component={StudentEnrollment} />
-            </Switch>
-        </Router>
-    );
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} /> // Use element and JSX components
+      <Route path="/about" element={<About />} />
+    </Routes>
+  );
 }
-
-export default App;
